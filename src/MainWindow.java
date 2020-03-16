@@ -134,7 +134,7 @@ public  class MainWindow extends  JFrame {
     private JPanel createFooter() {
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
-        JTextField TextField = new JTextField("by Michał Ryszka and Wojciech Kowalski 2020");
+        JTextField TextField = new JTextField("by Michał Ryszka 2020");
         Font font = new Font("Arial", Font.BOLD+Font.ITALIC,8);
         TextField.setFont(font);
         TextField.setEditable(false);
