@@ -69,10 +69,10 @@ public  class MainWindow extends  JFrame {
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
         JTextField TextField= new JTextField("Lunar Lander");
-        Font font = new Font("Arial", Font.BOLD+Font.ITALIC,30);
+        Font font = new Font("Arial", Font.BOLD+Font.ITALIC,30); // sapces between operators like + && etc
         TextField.setForeground(myColor);
         TextField.setFont(font);
-        TextField.setEditable(false);
+        TextField.setEditable(false); // use builder pattern !!! like tm.builder() [ENTER] and .component1 [ENTER] .component2 ... [ENTER] .build()
         TextField.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         panel.add(TextField);
 
@@ -103,7 +103,6 @@ public  class MainWindow extends  JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new StartMenu(CenterStartMenu());
-
             }
         });
 
@@ -135,7 +134,7 @@ public  class MainWindow extends  JFrame {
     private JPanel createFooter() {
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
-        JTextField TextField = new JTextField("by Michał Ryszka 2020");
+        JTextField TextField = new JTextField("by Michał Ryszka and Wojciech Kowalski 2020");
         Font font = new Font("Arial", Font.BOLD+Font.ITALIC,8);
         TextField.setFont(font);
         TextField.setEditable(false);
@@ -163,11 +162,9 @@ public  class MainWindow extends  JFrame {
     }
 
     private int[]  CenterStartMenu() {  //Methods help set location StartMenu Frame
-        int[] Loc = new int[4];
-        Loc[0] = this.getLocationOnScreen().x;
-        Loc[1] = this.getLocationOnScreen().y;
-        Loc[2] = this.getSize().width;
-        Loc[3] = this.getSize().height;
+        int[] Loc = new int[2];
+        Loc[0] = (this.getLocationOnScreen().x + this.getSize().width/4);
+        Loc[1] = (this.getLocationOnScreen().y + this.getSize().height/4);
         return Loc;
     }
 
