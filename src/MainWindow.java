@@ -162,9 +162,11 @@ public  class MainWindow extends  JFrame {
     }
 
     private int[]  CenterStartMenu() {  //Methods help set location StartMenu Frame
-        int[] Loc = new int[2];
-        Loc[0] = (this.getLocationOnScreen().x + this.getSize().width/4);
-        Loc[1] = (this.getLocationOnScreen().y + this.getSize().height/4);
+        int[] Loc = new int[4];
+        Loc[0] = this.getLocationOnScreen().x;
+        Loc[1] = this.getLocationOnScreen().y;
+        Loc[2] = this.getSize().width;
+        Loc[3] = this.getSize().height;
         return Loc;
     }
 
