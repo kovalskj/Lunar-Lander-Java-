@@ -5,32 +5,20 @@ public class StartMenu  extends JFrame {
 
     public StartMenu(int Loc[]) {
 
-        JPanel Header = createHeader();
-        JPanel Content = createContent();
-        JPanel Footer = createFooter();
-        BorderLayout borderLayout = new BorderLayout(5,5);
-        setLayout(borderLayout);
-        add(Header, BorderLayout.NORTH);
-        getContentPane().add(Content, BorderLayout.CENTER);
-        add(Footer, BorderLayout.SOUTH);
-        pack();
-        setSize(new Dimension(300, 150));
-        setVisible(true);
-        setLocation(setLoc(Loc));
+        FlowLayout Layout = new FlowLayout();
+        setLayout(Layout);
 
-    }
+        JLabel Nick = new JLabel("Imie: ");
+        Nick.setForeground(Color.GRAY);
+        Font font = new Font("Arial", Font.BOLD+Font.ITALIC,15);
+        Nick.setFont(font);
+        add(Nick);
 
-    private JPanel createFooter() {
-        JPanel panel = new JPanel();
-        JButton Back = new JButton("Wroc");
-        panel.add(Back);
-        JButton Next = new JButton("Dalej");
-        panel.add(Next);
-        return panel;
-    }
+        JTextField SetNick = new JTextField(15);
+        SetNick.setForeground(Color.GRAY);
+        SetNick.setFont(font);
+        add(SetNick);
 
-    private JPanel createContent() {
-        JPanel panel = new JPanel();
         JRadioButton Easy = new JRadioButton("Latwy");
         JRadioButton Medium = new JRadioButton("Sredni");
         JRadioButton Hard = new JRadioButton("Trudny");
@@ -42,32 +30,19 @@ public class StartMenu  extends JFrame {
         Easy.setFont(font2);
         Medium.setFont(font2);
         Hard.setFont(font2);
-        panel.add(Easy);
-        panel.add(Medium);
-        panel.add(Hard);
-        return panel;
-    }
+        add(Easy);
+        add(Medium);
+        add(Hard);
 
-    private JPanel createHeader() {
-        JPanel panel = new JPanel();
-        JLabel Nick = new JLabel("Imie: ");
-        Nick.setForeground(Color.GRAY);
-        Font font = new Font("Arial", Font.BOLD+Font.ITALIC,15);
-        Nick.setFont(font);
-        panel.add(Nick);
-        JTextField SetNick = new JTextField(15);
-        SetNick.setForeground(Color.GRAY);
-        SetNick.setFont(font);
-        panel.add(SetNick);
-        return panel;
-    }
+        JButton Back = new JButton("Wroc");
+        add(Back);
+        JButton Next = new JButton("Dalej");
+        add(Next);
 
-    private Point setLoc(int[] Loc) {
-        Point result = new Point();
-        Loc[2] = Loc[2]/2 - (this.getSize().width/2);
-        Loc[3] = Loc[3]/2 - (this.getSize().height/2);
-        result.x = Loc[0] + Loc[2];
-        result.y = Loc[1] + Loc[3];
-        return result;
+        setLocation(Loc[0], Loc[1]);
+        setSize(new Dimension(280, 150));
+        setVisible(true);
+
+
     }
 }
