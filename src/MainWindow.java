@@ -2,12 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
+
 
 public  class MainWindow extends  JFrame {
 
@@ -16,15 +11,20 @@ public  class MainWindow extends  JFrame {
     private JButton ResultTableButton;
     private JButton AuthorsButton;
     private JButton ExitButton;
+    private JPanel Header;
+    private JPanel Content;
+    private JPanel Footer;
+    private JPanel Empty;
+    private JPanel Empty2;
 
 
     public MainWindow(){
 
-        JPanel Header = createHeader();
-        JPanel Content = createContent();
-        JPanel Footer = createFooter();
-        JPanel Empty = createEmpty();
-        JPanel Empty2 = createEmpty();
+        Header = createHeader();
+        Content = createContent();
+        Footer = createFooter();
+        Empty = createEmpty();
+        Empty2 = createEmpty();
 
         BorderLayout borderLayout = new BorderLayout(10,20);
         setLayout(borderLayout);
@@ -69,10 +69,10 @@ public  class MainWindow extends  JFrame {
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
         JTextField TextField= new JTextField("Lunar Lander");
-        Font font = new Font("Arial", Font.BOLD+Font.ITALIC,30); // sapces between operators like + && etc
+        Font font = new Font("Arial", Font.BOLD + Font.ITALIC,30);
         TextField.setForeground(myColor);
         TextField.setFont(font);
-        TextField.setEditable(false); // use builder pattern !!! like tm.builder() [ENTER] and .component1 [ENTER] .component2 ... [ENTER] .build()
+        TextField.setEditable(false);
         TextField.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         panel.add(TextField);
 
@@ -86,11 +86,6 @@ public  class MainWindow extends  JFrame {
         ResultTableButton = new JButton("Tabela wynikow");
         AuthorsButton = new JButton("Autorzy");
         ExitButton = new JButton("Wyjdź");
-        //This not work, but may help if we try to design buttons
-        panel.setMaximumSize(new Dimension(250, 200));
-        PlayButton.setPreferredSize(new Dimension(80, 40));
-        RulesButton.setPreferredSize(new Dimension(80, 40));
-        ExitButton.setPreferredSize(new Dimension(80, 40));
 
         panel.setLayout(new GridLayout(5, 1, 10, 20));
         panel.add(PlayButton);
@@ -102,7 +97,7 @@ public  class MainWindow extends  JFrame {
         PlayButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new StartMenu(CenterStartMenu());
+                new StartMenu(CenterFrame());
             }
         });
 
@@ -116,21 +111,21 @@ public  class MainWindow extends  JFrame {
         RulesButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Rules(panel);
+                Rules();
             }
         });
 
         ResultTableButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Results(panel);
+                Results();
             }
         });
 
         AuthorsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Authors(CenterStartMenu());
+                new Authors(CenterFrame());
             }
         });
 
@@ -163,12 +158,12 @@ public  class MainWindow extends  JFrame {
             System.exit(0);
     }
 
-    private void Rules(JPanel panel) {
+    private void Rules() {
         new Rules(this.getLocationOnScreen(), this.getSize().width, this.getSize().height);
         this.dispose();
     }
 
-    private int[]  CenterStartMenu() {  //Methods help set location StartMenu Frame
+    private int[]  CenterFrame() {
         int[] Loc = new int[4];
         Loc[0] = this.getLocationOnScreen().x;
         Loc[1] = this.getLocationOnScreen().y;
@@ -177,7 +172,7 @@ public  class MainWindow extends  JFrame {
         return Loc;
     }
 
-    private void Results(JPanel panel) {
+    private void Results() {
         new ResultsTable(this.getLocationOnScreen(), this.getSize().width, this.getSize().height);
         this.dispose();
     }
