@@ -6,11 +6,11 @@ import java.awt.event.ActionListener;
 
 public  class MainWindow extends  JFrame {
 
-    private JButton PlayButton;
-    private JButton RulesButton;
-    private JButton ResultTableButton;
-    private JButton AuthorsButton;
-    private JButton ExitButton;
+    private JButton playButton;
+    private JButton rulesButton;
+    private JButton resultTableButton;
+    private JButton authorsButton;
+    private JButton exitButton;
     private JPanel Header;
     private JPanel Content;
     private JPanel Footer;
@@ -81,51 +81,51 @@ public  class MainWindow extends  JFrame {
 
     private JPanel createContent() {
         JPanel panel = new JPanel();
-        PlayButton = new JButton("Graj");
-        RulesButton = new JButton("Zasady");
-        ResultTableButton = new JButton("Tabela wynikow");
-        AuthorsButton = new JButton("Autorzy");
-        ExitButton = new JButton("Wyjdź");
+        playButton = new JButton("Graj");
+        rulesButton = new JButton("Zasady");
+        resultTableButton = new JButton("Tabela wynikow");
+        authorsButton = new JButton("Autorzy");
+        exitButton = new JButton("Wyjdź");
 
         panel.setLayout(new GridLayout(5, 1, 10, 20));
-        panel.add(PlayButton);
-        panel.add(RulesButton);
-        panel.add(ResultTableButton);
-        panel.add(AuthorsButton);
-        panel.add(ExitButton);
+        panel.add(playButton);
+        panel.add(rulesButton);
+        panel.add(resultTableButton);
+        panel.add(authorsButton);
+        panel.add(exitButton);
 
-        PlayButton.addActionListener(new ActionListener() {
+        playButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new StartMenu(CenterFrame());
+                new StartMenu(centerFrame());
             }
         });
 
-        ExitButton.addActionListener(new ActionListener() {    // Application Exit Action Listener
+        exitButton.addActionListener(new ActionListener() {    // Application Exit Action Listener
             @Override
             public void actionPerformed(ActionEvent e) {       //Exit method
                 Exit(panel);
             }
         });
 
-        RulesButton.addActionListener(new ActionListener() {
+        rulesButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Rules();
             }
         });
 
-        ResultTableButton.addActionListener(new ActionListener() {
+        resultTableButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Results();
             }
         });
 
-        AuthorsButton.addActionListener(new ActionListener() {
+        authorsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Authors(CenterFrame());
+                new Authors(centerFrame());
             }
         });
 
@@ -163,7 +163,7 @@ public  class MainWindow extends  JFrame {
         this.dispose();
     }
 
-    private int[]  CenterFrame() {
+    private int[]  centerFrame() {
         int[] Loc = new int[4];
         Loc[0] = this.getLocationOnScreen().x;
         Loc[1] = this.getLocationOnScreen().y;
