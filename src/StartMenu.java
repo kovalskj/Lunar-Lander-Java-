@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class StartMenu  extends JFrame {
 
@@ -7,7 +9,7 @@ public class StartMenu  extends JFrame {
 
         JPanel Header = createHeader();
         JPanel Content = createContent();
-        JPanel Footer = createFooter();
+        JPanel Footer = createFooter(this);
         BorderLayout borderLayout = new BorderLayout(5,5);
         setLayout(borderLayout);
         add(Header, BorderLayout.NORTH);
@@ -20,12 +22,19 @@ public class StartMenu  extends JFrame {
 
     }
 
-    private JPanel createFooter() {
+    private JPanel createFooter(JFrame frame) {
         JPanel panel = new JPanel();
-        JButton Back = new JButton("Wroc");
-        panel.add(Back);
+        JButton BackButton = new JButton("Wroc");
+        panel.add(BackButton);
         JButton Next = new JButton("Dalej");
         panel.add(Next);
+        BackButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+            }
+        });
+
         return panel;
     }
 

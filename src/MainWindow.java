@@ -116,7 +116,7 @@ public  class MainWindow extends  JFrame {
         RulesButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Help(panel);
+                Rules(panel);
             }
         });
 
@@ -124,6 +124,13 @@ public  class MainWindow extends  JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Results(panel);
+            }
+        });
+
+        AuthorsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new Authors(CenterStartMenu());
             }
         });
 
@@ -156,7 +163,7 @@ public  class MainWindow extends  JFrame {
             System.exit(0);
     }
 
-    private void Help(JPanel panel) {
+    private void Rules(JPanel panel) {
         new Rules(this.getLocationOnScreen(), this.getSize().width, this.getSize().height);
         this.dispose();
     }
@@ -174,5 +181,8 @@ public  class MainWindow extends  JFrame {
         new ResultsTable(this.getLocationOnScreen(), this.getSize().width, this.getSize().height);
         this.dispose();
     }
+
+
+
 
 }
