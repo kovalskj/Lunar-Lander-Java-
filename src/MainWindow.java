@@ -1,7 +1,13 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 
 public  class MainWindow extends  JFrame {
@@ -18,14 +24,21 @@ public  class MainWindow extends  JFrame {
     private JPanel Empty2;
 
 
-    public MainWindow(){
+    public MainWindow() {
 
         Header = createHeader();
         Content = createContent();
         Footer = createFooter();
         Empty = createEmpty();
         Empty2 = createEmpty();
+        pack();
+        setSize(new Dimension(640, 480));
+        try {
+            BufferedImage myImage = ImageIO.read(new File("menu_background.jpg"));
+            this.setContentPane(new BackgroundImage(myImage, this));
+        }catch (Exception e) {
 
+        }
         BorderLayout borderLayout = new BorderLayout(10,20);
         setLayout(borderLayout);
         add(Header, BorderLayout.NORTH);
@@ -35,9 +48,6 @@ public  class MainWindow extends  JFrame {
         add(Footer, BorderLayout.SOUTH);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-
-        pack();
-        setSize(new Dimension(640, 480));
         setVisible(true);
     }
 
@@ -74,8 +84,9 @@ public  class MainWindow extends  JFrame {
         TextField.setFont(font);
         TextField.setEditable(false);
         TextField.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        TextField.setOpaque(false);
         panel.add(TextField);
-
+        panel.setOpaque(false);
         return panel;
     }
 
@@ -93,7 +104,7 @@ public  class MainWindow extends  JFrame {
         panel.add(resultTableButton);
         panel.add(authorsButton);
         panel.add(exitButton);
-
+        panel.setOpaque(false);
         playButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -135,20 +146,24 @@ public  class MainWindow extends  JFrame {
 
     private JPanel createFooter() {
         JPanel panel = new JPanel();
+        Color myColor = new Color(176, 196, 222);
         panel.setLayout(new FlowLayout());
         JTextField TextField = new JTextField("by Michał Ryszka and Wojciech Kowalski 2020");
         Font font = new Font("Arial", Font.BOLD+Font.ITALIC,8);
         TextField.setFont(font);
+        TextField.setForeground(myColor);
         TextField.setEditable(false);
         TextField.setBorder(javax.swing.BorderFactory.createEmptyBorder());
+        TextField.setOpaque(false);
         panel.add(TextField);
-        panel.add(TextField);
+        panel.setOpaque(false);
         return panel;
     }
 
     private  JPanel createEmpty() {
         JPanel panel = new JPanel();
         panel.add(Box.createRigidArea(new Dimension(30,0)));
+        panel.setOpaque(false);
         return  panel;
     }
 
