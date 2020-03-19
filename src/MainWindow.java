@@ -20,8 +20,6 @@ public  class MainWindow extends  JFrame {
     private JPanel Header;
     private JPanel Content;
     private JPanel Footer;
-    private JPanel Empty;
-    private JPanel Empty2;
 
 
     public MainWindow() {
@@ -29,8 +27,6 @@ public  class MainWindow extends  JFrame {
         Header = createHeader();
         Content = createContent();
         Footer = createFooter();
-        Empty = createEmpty();
-        Empty2 = createEmpty();
         pack();
         setSize(new Dimension(640, 480));
         try {
@@ -42,9 +38,7 @@ public  class MainWindow extends  JFrame {
         BorderLayout borderLayout = new BorderLayout(10,20);
         setLayout(borderLayout);
         add(Header, BorderLayout.NORTH);
-        add(Empty, BorderLayout.EAST);
         getContentPane().add(Content, BorderLayout.CENTER);
-        add(Empty2, BorderLayout.WEST);
         add(Footer, BorderLayout.SOUTH);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -56,21 +50,25 @@ public  class MainWindow extends  JFrame {
         JPanel Header = createHeader();
         JPanel Content = createContent();
         JPanel Footer = createFooter();
-        JPanel Empty = createEmpty();
-        JPanel Empty2 = createEmpty();
+
+
+        pack();
+        setSize(new Dimension(width, heigth));
+        try {
+            BufferedImage myImage = ImageIO.read(new File("menu_background.jpg"));
+            this.setContentPane(new BackgroundImage(myImage, this));
+        }catch (Exception e) {
+
+        }
 
         BorderLayout borderLayout = new BorderLayout(10,20);
         setLayout(borderLayout);
         add(Header, BorderLayout.NORTH);
-        add(Empty, BorderLayout.EAST);
         getContentPane().add(Content, BorderLayout.CENTER);
-        add(Empty2, BorderLayout.WEST);
         add(Footer, BorderLayout.SOUTH);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         setLocation(Loc);
-        pack();
-        setSize(new Dimension(width, heigth));
         setVisible(true);
     }
 
@@ -98,11 +96,21 @@ public  class MainWindow extends  JFrame {
         authorsButton = new JButton("Autorzy");
         exitButton = new JButton("Wyjdź");
 
-        panel.setLayout(new GridLayout(5, 1, 10, 20));
+        BoxLayout boxlayout = new BoxLayout(panel, BoxLayout.Y_AXIS);
+        panel.setLayout(boxlayout);
+        playButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         panel.add(playButton);
+        panel.add(Box.createRigidArea(new Dimension(0, 10)));
+        rulesButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         panel.add(rulesButton);
+        panel.add(Box.createRigidArea(new Dimension(0, 10)));
+        resultTableButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         panel.add(resultTableButton);
+        panel.add(Box.createRigidArea(new Dimension(0, 10)));
+        authorsButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         panel.add(authorsButton);
+        panel.add(Box.createRigidArea(new Dimension(0, 10)));
+        exitButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         panel.add(exitButton);
         panel.setOpaque(false);
         playButton.addActionListener(new ActionListener() {
@@ -160,12 +168,6 @@ public  class MainWindow extends  JFrame {
         return panel;
     }
 
-    private  JPanel createEmpty() {
-        JPanel panel = new JPanel();
-        panel.add(Box.createRigidArea(new Dimension(30,0)));
-        panel.setOpaque(false);
-        return  panel;
-    }
 
     private void Exit(JPanel panel){
         if (JOptionPane.showConfirmDialog(panel,"Potwierdz jesli chcesz wyjśc.","Lunar Lander",
