@@ -20,7 +20,7 @@ public  class MainWindow extends  JFrame {
     private JPanel Header;
     private JPanel Content;
     private JPanel Footer;
-
+    private JFrame MainWindow;
 
     public MainWindow() {
 
@@ -43,6 +43,7 @@ public  class MainWindow extends  JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setVisible(true);
+        MainWindow = this;
     }
 
     public MainWindow(Point Loc, int width, int heigth){
@@ -116,7 +117,7 @@ public  class MainWindow extends  JFrame {
         playButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new StartMenu(centerFrame());
+                new StartMenu(centerFrame(), MainWindow);
             }
         });
 

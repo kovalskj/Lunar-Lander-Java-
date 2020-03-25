@@ -1,9 +1,9 @@
 import javax.swing.*;
-        import java.awt.*;
+import java.awt.*;
 
-public class ResultsTable extends JFrame {
+public class GameWindow extends JFrame {
 
-    public ResultsTable(Point Loc, int width, int heigth){
+    public GameWindow(Point Loc, int width, int heigth){
 
         pack();
         setSize(new Dimension(width, heigth));

@@ -5,7 +5,9 @@ import java.awt.event.ActionListener;
 
 public class StartMenu  extends JFrame {
 
-    public StartMenu(int Loc[]) {
+    private JTextField SetNick;
+    private JFrame MainFrame;
+    public StartMenu(int Loc[], JFrame frame) {
 
         JPanel Header = createHeader();
         JPanel Content = createContent();
@@ -19,14 +21,14 @@ public class StartMenu  extends JFrame {
         setSize(new Dimension(300, 150));
         setVisible(true);
         setLocation(setLoc(Loc));
-
+        MainFrame = frame;
     }
 
     private JPanel createFooter(JFrame frame) {
         JPanel panel = new JPanel();
         JButton BackButton = new JButton("Wroc");
         panel.add(BackButton);
-        JButton Next = new JButton("Dalej");
+        JButton Next = new JButton("Rozpocznij gre!");
         panel.add(Next);
         BackButton.addActionListener(new ActionListener() {
             @Override
@@ -34,6 +36,18 @@ public class StartMenu  extends JFrame {
                 frame.dispose();
             }
         });
+        Next.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(isnotEmpty(SetNick)){
+                    GameWindow(MainFrame);
+                }else{
+                    SetNick.setText("Nie dziala");
+                }
+
+            }
+        });
+
 
         return panel;
     }
@@ -64,7 +78,7 @@ public class StartMenu  extends JFrame {
         Font font = new Font("Arial", Font.BOLD+Font.ITALIC,15);
         Nick.setFont(font);
         panel.add(Nick);
-        JTextField SetNick = new JTextField(15);
+        SetNick = new JTextField(15);
         SetNick.setForeground(Color.GRAY);
         SetNick.setFont(font);
         panel.add(SetNick);
@@ -79,4 +93,19 @@ public class StartMenu  extends JFrame {
         result.y = Loc[1] + Loc[3];
         return result;
     }
+
+    public Boolean isnotEmpty(JTextField Nick){
+        if(Nick.getText().trim().isEmpty()){
+            return  false;
+        }else{
+            return  true;
+        }
+    }
+
+    private void GameWindow(JFrame frame) {
+        new GameWindow(frame.getLocationOnScreen(), frame.getSize().width, frame.getSize().height);
+        this.dispose();
+    }
+
 }
+
