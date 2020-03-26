@@ -2,11 +2,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Enumeration;
 
 public class StartMenu  extends JFrame {
 
     private JTextField SetNick;
     private JFrame MainWindow;
+    private ButtonGroup DifficultGroup;
+
     public StartMenu(int Loc[], JFrame frame) {
 
         JPanel Header = createHeader();
@@ -39,13 +42,13 @@ public class StartMenu  extends JFrame {
         Next.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(isnotEmpty(SetNick)){
+                if(isnotEmpty(SetNick) && difficultLevelChecked(DifficultGroup)){
                     GameWindow(MainWindow);
                     MainWindow.dispose();
                     thisFrame.dispose();
 
                 }else{
-                    SetNick.setText("Nie dziala");
+                    SetNick.setText("Prosze uzupelnic dane!");
                 }
             }
         });
@@ -59,7 +62,7 @@ public class StartMenu  extends JFrame {
         JRadioButton Easy = new JRadioButton("Latwy");
         JRadioButton Medium = new JRadioButton("Sredni");
         JRadioButton Hard = new JRadioButton("Trudny");
-        ButtonGroup DifficultGroup = new ButtonGroup();
+        DifficultGroup = new ButtonGroup();
         DifficultGroup.add(Easy);
         DifficultGroup.add(Medium);
         DifficultGroup.add(Hard);
@@ -102,6 +105,17 @@ public class StartMenu  extends JFrame {
         }else{
             return  true;
         }
+    }
+
+    public Boolean difficultLevelChecked(ButtonGroup RG){
+        Boolean flag = false;
+        for (Enumeration<AbstractButton> buttons = RG.getElements(); buttons.hasMoreElements();) {
+            AbstractButton button = buttons.nextElement();
+            if (button.isSelected()) {
+                flag = true;
+            }
+        }
+        return flag;
     }
 
     private void GameWindow(JFrame frame) {
