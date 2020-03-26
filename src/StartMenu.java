@@ -47,7 +47,6 @@ public class StartMenu  extends JFrame {
                 }else{
                     SetNick.setText("Nie dziala");
                 }
-
             }
         });
 
