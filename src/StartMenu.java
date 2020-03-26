@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 public class StartMenu  extends JFrame {
 
     private JTextField SetNick;
-    private JFrame MainFrame;
+    private JFrame MainWindow;
     public StartMenu(int Loc[], JFrame frame) {
 
         JPanel Header = createHeader();
@@ -21,10 +21,10 @@ public class StartMenu  extends JFrame {
         setSize(new Dimension(300, 150));
         setVisible(true);
         setLocation(setLoc(Loc));
-        MainFrame = frame;
+        MainWindow = frame;
     }
 
-    private JPanel createFooter(JFrame frame) {
+    private JPanel createFooter(JFrame thisFrame) {
         JPanel panel = new JPanel();
         JButton BackButton = new JButton("Wroc");
         panel.add(BackButton);
@@ -33,14 +33,17 @@ public class StartMenu  extends JFrame {
         BackButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
+                thisFrame.dispose();
             }
         });
         Next.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if(isnotEmpty(SetNick)){
-                    GameWindow(MainFrame);
+                    GameWindow(MainWindow);
+                    MainWindow.dispose();
+                    thisFrame.dispose();
+
                 }else{
                     SetNick.setText("Nie dziala");
                 }
@@ -104,7 +107,6 @@ public class StartMenu  extends JFrame {
 
     private void GameWindow(JFrame frame) {
         new GameWindow(frame.getLocationOnScreen(), frame.getSize().width, frame.getSize().height);
-        this.dispose();
     }
 
 }
