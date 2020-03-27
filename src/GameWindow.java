@@ -16,6 +16,9 @@ public class GameWindow extends JFrame {
                 new MainWindow(locPoint(), getWidth(), getHeigth());
             }
         });
+
+        DrawGameField Draw = new DrawGameField();
+        this.add(Draw);
     }
 
     private Point locPoint() {
