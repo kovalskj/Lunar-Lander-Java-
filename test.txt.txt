@@ -1,0 +1,1 @@
+testwczytywania danych z pliku txt
