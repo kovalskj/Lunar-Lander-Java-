@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa993246-d331-4de9-8f34-a1770bc99c35" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MyThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DrawPlanet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DrawPlanet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DrawShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DrawShip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameWindow.java" afterDir="false" />
-    </list>
+    <list default="true" id="fa993246-d331-4de9-8f34-a1770bc99c35" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585410969776</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="v0.65 - Watki">
+      <created>1585414582044</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1585414582044</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -170,7 +171,8 @@
     <MESSAGE value="v0.62" />
     <MESSAGE value="v0.63 - Graphic drawer introduce" />
     <MESSAGE value="v0.64" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.64" />
+    <MESSAGE value="v0.65 - Watki" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.65 - Watki" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1245" y="233" key="#com.intellij.ide.util.MemberChooser" timestamp="1585412425787">
@@ -181,10 +183,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585389324779" />
-    <state x="699" y="145" key="CommitChangelistDialog2" timestamp="1585410969317">
+    <state x="699" y="145" key="CommitChangelistDialog2" timestamp="1585414581647">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="699" y="145" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585410969317" />
+    <state x="699" y="145" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585414581647" />
     <state x="92" y="92" width="1736" height="856" maximized="true" key="DiffContextDialog" timestamp="1584480687853">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -193,22 +195,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585412828511" />
-    <state width="1877" height="101" key="GridCell.Tab.0.bottom" timestamp="1585414558157">
+    <state width="1877" height="101" key="GridCell.Tab.0.bottom" timestamp="1585414585014">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="101" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585414558157" />
-    <state width="1877" height="101" key="GridCell.Tab.0.center" timestamp="1585414558157">
+    <state width="1877" height="101" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585414585014" />
+    <state width="1877" height="101" key="GridCell.Tab.0.center" timestamp="1585414585014">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="101" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585414558157" />
-    <state width="1877" height="101" key="GridCell.Tab.0.left" timestamp="1585414558157">
+    <state width="1877" height="101" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585414585014" />
+    <state width="1877" height="101" key="GridCell.Tab.0.left" timestamp="1585414585014">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="101" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585414558157" />
-    <state width="1877" height="101" key="GridCell.Tab.0.right" timestamp="1585414558157">
+    <state width="1877" height="101" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585414585014" />
+    <state width="1877" height="101" key="GridCell.Tab.0.right" timestamp="1585414585014">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="101" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585414558157" />
+    <state width="1877" height="101" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585414585014" />
     <state width="1877" height="127" key="GridCell.Tab.1.bottom" timestamp="1585409142750">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
