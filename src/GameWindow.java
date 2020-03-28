@@ -3,6 +3,9 @@ import java.awt.*;
 
 public class GameWindow extends JFrame {
 
+    DrawPlanet Planet;
+    DrawShip Ship;
+
     public GameWindow(Point Loc, int width, int heigth){
 
         pack();
@@ -17,9 +20,11 @@ public class GameWindow extends JFrame {
             }
         });
 
-        Thread ThreadA = new Thread();
-        ThreadA.start();
-        run();
+        Planet = new DrawPlanet();
+        Ship = new DrawShip();
+       MyThread myThread = new MyThread(this);
+        (new Thread(myThread)).start();
+
     }
 
     private Point locPoint() {
@@ -36,14 +41,8 @@ public class GameWindow extends JFrame {
 
     @Override
     public void paint(Graphics g) {
-        super.paint(g);
-        DrawPlanet Planet = new DrawPlanet();
-        DrawShip Ship = new DrawShip();
         Planet.paint(g);
         Ship.paint(g);
     }
 
-    public void run(){
-        repaint();
-    }
 }
