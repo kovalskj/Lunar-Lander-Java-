@@ -17,6 +17,9 @@ public class GameWindow extends JFrame {
             }
         });
 
+        Thread ThreadA = new Thread();
+        ThreadA.start();
+        run();
     }
 
     private Point locPoint() {
@@ -31,4 +34,16 @@ public class GameWindow extends JFrame {
         return this.getSize().height;
     }
 
+    @Override
+    public void paint(Graphics g) {
+        super.paint(g);
+        DrawPlanet Planet = new DrawPlanet();
+        DrawShip Ship = new DrawShip();
+        Planet.paint(g);
+        Ship.paint(g);
+    }
+
+    public void run(){
+        repaint();
+    }
 }
