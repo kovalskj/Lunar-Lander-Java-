@@ -28,7 +28,7 @@ public  class MainWindow extends  JFrame {
         Content = createContent();
         Footer = createFooter();
         pack();
-        setSize(new Dimension(640, 480));
+        setSize(new Dimension(800, 700));
         try {
             BufferedImage myImage = ImageIO.read(new File("menu_background.jpg"));
             this.setContentPane(new BackgroundImage(myImage, this));

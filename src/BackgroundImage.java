@@ -14,7 +14,7 @@ public class BackgroundImage extends JComponent {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D)g;
-        g2.scale(scale_x,scale_y);
+        //g2.scale(scale_x,scale_y);
         g2.drawImage(image, 0, 0, this);
     }
 
