@@ -22,7 +22,7 @@ public  class MainWindow extends  JFrame {
     private JPanel Footer;
     private JFrame MainWindow;
 
-    public MainWindow() {
+    public MainWindow(){
 
         Header = createHeader();
         Content = createContent();
@@ -44,6 +44,7 @@ public  class MainWindow extends  JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
         MainWindow = this;
+
     }
 
     public MainWindow(Point Loc, int width, int heigth){
