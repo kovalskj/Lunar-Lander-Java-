@@ -167,6 +167,7 @@
   <component name="WindowStateProjectService">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     <state x="361" y="71" key="#Project_Structure" timestamp="1585342378204">
       <screen x="0" y="0" width="1536" height="824" />
@@ -183,6 +184,12 @@
     </state>
     <state x="699" y="145" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585344656158" />
 
+=======
+    <state x="699" y="145" key="CommitChangelistDialog2" timestamp="1585254238146">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="699" y="145" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585254238146" />
+>>>>>>> parent of 4c2d35b... v0.62 graphic drawer
 =======
     <state x="699" y="145" key="CommitChangelistDialog2" timestamp="1585254238146">
       <screen x="0" y="0" width="1920" height="1040" />
