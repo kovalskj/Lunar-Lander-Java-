@@ -3,7 +3,8 @@ import java.awt.*;
 
 public class DrawPlanet extends JPanel {
 
-    protected void paintPlanet(Graphics g) {
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
         g2d.drawLine(0, 660, 60, 580);
         g2d.drawLine(60, 580, 100, 540);
@@ -24,7 +25,5 @@ public class DrawPlanet extends JPanel {
         g2d.drawLine(750, 540, 800, 540);
     }
 
-    public void paint(Graphics g){
-        paintPlanet(g);
-    }
+
 }

@@ -1,22 +1,23 @@
-import javax.swing.*;
 
-import static java.lang.Thread.sleep;
+import java.awt.Component;
+
 
 public class MyThread implements  Runnable{
-    private JFrame component;
 
-    public MyThread(JFrame component) {
+    private final Component component;
+    private Thread t;
+    public MyThread(Component component) {
         this.component = component;
-        System.out.println("Watek");
+        t = new Thread(this, "WatekA");
+        t.start();
     }
 
     public void run() {
 
         while (true) {
             component.repaint();
-            System.out.println("Watek run");
             try {
-                sleep(5);
+                Thread.sleep(5);
             } catch (Exception e) {
                 System.out.println("Wyjątek!");
             }

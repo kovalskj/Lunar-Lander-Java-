@@ -3,17 +3,15 @@ import java.awt.*;
 
 public class DrawShip extends JPanel {
 
-    int x = 30 ,y = 30;
+    int x = 400 ,y = 30;
 
-    protected void paintShip(Graphics g) {
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        g.fillOval(x, y, 30, 30);
+        if(y<510) {
+            y += 1;
+        }
 
-        g.fillOval(x, y, 50, 50);
-        y += 1;
-        System.out.println(y);
     }
 
-    public void paint(Graphics g){
-        super.paint(g);
-        paintShip(g);
-    }
 }

@@ -2,13 +2,15 @@ import javax.swing.*;
 import java.awt.*;
 
 public class GameWindow extends JFrame {
-
     DrawPlanet Planet;
     DrawShip Ship;
 
-    public GameWindow(Point Loc, int width, int heigth){
+    public GameWindow(Point Loc, int width, int heigth) {
 
-        pack();
+        Planet = new DrawPlanet();
+        Ship = new DrawShip();
+        Game game = new Game(Planet, Ship);
+        add(game);
         setSize(new Dimension(width, heigth));
         setLocation(Loc);
         setVisible(true);
@@ -20,12 +22,9 @@ public class GameWindow extends JFrame {
             }
         });
 
-        Planet = new DrawPlanet();
-        Ship = new DrawShip();
-       MyThread myThread = new MyThread(this);
-        (new Thread(myThread)).start();
-
+        new MyThread(game);
     }
+
 
     private Point locPoint() {
         return this.getLocation();
@@ -39,10 +38,20 @@ public class GameWindow extends JFrame {
         return this.getSize().height;
     }
 
-    @Override
-    public void paint(Graphics g) {
-        Planet.paint(g);
-        Ship.paint(g);
-    }
+    private static class Game extends JPanel {
+        DrawPlanet Planet;
+        DrawShip Ship;
 
+        Game(DrawPlanet Planet, DrawShip Ship){
+            this.Planet = Planet;
+            this.Ship = Ship;
+        }
+
+        @Override
+        public void paintComponent(Graphics g) {
+            super.paintComponent(g);
+            Planet.paintComponent(g);
+            Ship.paintComponent(g);
+        }
+    }
 }
