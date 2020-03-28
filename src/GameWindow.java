@@ -16,8 +16,8 @@ public class GameWindow extends JFrame {
                 new MainWindow(locPoint(), getWidth(), getHeigth());
             }
         });
-        Thread Thread1 = new Thread();
 
+        Thread Thread1 = new Thread();
     }
 
     private Point locPoint() {

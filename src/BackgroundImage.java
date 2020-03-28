@@ -4,6 +4,7 @@ import java.awt.*;
 public class BackgroundImage extends JComponent {
     private Image image;
     private double scale_x, scale_y;
+
     public BackgroundImage(Image image, JFrame frame) {
         this.image = image;
         scale_x = obliczscale(frame)[0];
