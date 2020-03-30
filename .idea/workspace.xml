@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa993246-d331-4de9-8f34-a1770bc99c35" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DrawPlanet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DrawPlanet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DrawShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DrawShip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConfigReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConfigReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585431761251</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="v0.69">
+      <created>1585585248219</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1585585248220</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -200,7 +204,8 @@
     <MESSAGE value="v0.65 - Watki" />
     <MESSAGE value="v0.66 - Watki, Rysowanie modelu" />
     <MESSAGE value="v0.67 Poczatki wczytywania" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.67 Poczatki wczytywania" />
+    <MESSAGE value="v0.69" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.69" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1245" y="233" key="#com.intellij.ide.util.MemberChooser" timestamp="1585412425787">
