@@ -14,8 +14,9 @@ public class Game extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        Planet.paint(g);
-        Ship.paint(g);
+        Graphics2D g2d = (Graphics2D)g;
+        Planet.paintComponent(g2d);
+        Ship.paintComponent(g2d);
     }
 
 }

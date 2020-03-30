@@ -3,11 +3,11 @@ import java.awt.*;
 
 public class GameWindow extends JFrame {
 
-    public GameWindow(Point Loc, int width, int heigth) {
+    public GameWindow(Point Loc) {
 
         Game game = new Game(new DrawPlanet(), new DrawShip());
         add(game);
-        setSize(new Dimension(width, heigth));
+        setSize(800, 700);
         setLocation(Loc);
         setVisible(true);
 

@@ -119,7 +119,7 @@ public class StartMenu  extends JFrame {
     }
 
     private void GameWindow(JFrame frame) {
-        new GameWindow(frame.getLocationOnScreen(), frame.getSize().width, frame.getSize().height);
+        new GameWindow(frame.getLocationOnScreen());
     }
 
 }
