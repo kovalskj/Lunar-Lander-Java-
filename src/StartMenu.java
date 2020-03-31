@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.Enumeration;
 
 public class StartMenu  extends JFrame {
@@ -46,9 +48,6 @@ public class StartMenu  extends JFrame {
                     GameWindow(MainWindow);
                     MainWindow.dispose();
                     thisFrame.dispose();
-
-                }else{
-                    SetNick.setText("Prosze uzupelnic dane!");
                 }
             }
         });
@@ -87,6 +86,13 @@ public class StartMenu  extends JFrame {
         SetNick.setForeground(Color.GRAY);
         SetNick.setFont(font);
         panel.add(SetNick);
+        SetNick.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                SetNick.setBackground(null);
+            }
+        });
         return panel;
     }
 
@@ -101,6 +107,8 @@ public class StartMenu  extends JFrame {
 
     public Boolean isnotEmpty(JTextField Nick){
         if(Nick.getText().trim().isEmpty()){
+            SetNick.setBackground(new Color(255, 51, 102));
+            JOptionPane.showMessageDialog(null, "Prosze wpisać nick gracza");
             return  false;
         }else{
             return  true;
@@ -108,14 +116,15 @@ public class StartMenu  extends JFrame {
     }
 
     public Boolean difficultLevelChecked(ButtonGroup RG){
-        Boolean flag = false;
+
         for (Enumeration<AbstractButton> buttons = RG.getElements(); buttons.hasMoreElements();) {
             AbstractButton button = buttons.nextElement();
             if (button.isSelected()) {
-                flag = true;
+                return true;
             }
         }
-        return flag;
+        JOptionPane.showMessageDialog(null, "Prosze wybrać poziom trudności");
+        return false;
     }
 
     private void GameWindow(JFrame frame) {
