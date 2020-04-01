@@ -5,9 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.util.Arrays;
 
 
 public  class MainWindow extends  JFrame {
@@ -33,7 +31,7 @@ public  class MainWindow extends  JFrame {
             BufferedImage myImage = ImageIO.read(new File("menu_background.jpg"));
             this.setContentPane(new BackgroundImage(myImage, this));
         }catch (Exception e) {
-
+            System.out.println("Blad obrazka!");
         }
         BorderLayout borderLayout = new BorderLayout(10,20);
         setLayout(borderLayout);
@@ -45,6 +43,12 @@ public  class MainWindow extends  JFrame {
         setVisible(true);
         MainWindow = this;
 
+        try {
+            LoadingLevel test = new LoadingLevel(new File("testLevel.txt"));
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 
     public MainWindow(Point Loc, int width, int heigth){
