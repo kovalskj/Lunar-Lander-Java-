@@ -8,11 +8,15 @@ public class DrawShip extends JPanel {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D)g;
-        g2d.fillOval(x, y, 30, 30);
+        g2d.fillOval(x, shipPosition(), 30, 30);
+
+    }
+
+    public int shipPosition(){
         if(y<510) {
             y += 1;
         }
-
+        return y;
     }
 
 }
