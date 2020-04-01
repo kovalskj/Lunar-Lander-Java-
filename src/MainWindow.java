@@ -43,12 +43,6 @@ public  class MainWindow extends  JFrame {
         setVisible(true);
         MainWindow = this;
 
-        try {
-            LoadingLevel test = new LoadingLevel(new File("testLevel.txt"));
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
     }
 
     public MainWindow(Point Loc, int width, int heigth){

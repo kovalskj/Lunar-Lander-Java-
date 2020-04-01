@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa993246-d331-4de9-8f34-a1770bc99c35" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/LoadingLevel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testLevel.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/DrawPlanet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/DrawPlanet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/DrawShip.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/DrawShip.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/GameWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/GameWindow$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/GameWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/GameWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/LoadingLevel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/LoadingLevel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/MainWindow$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/MainWindow$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/MainWindow$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/MainWindow$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/MainWindow$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/MainWindow$3.class" afterDir="false" />
@@ -16,10 +15,11 @@
       <change beforePath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/MainWindow$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/MainWindow$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/MainWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PROZE_Projekt_gry/MainWindow.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DrawPlanet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DrawPlanet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DrawShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DrawShip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GameWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GameWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoadingLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoadingLevel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.txt.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testLevel.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testLevel.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585756308641</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="v0.70">
+      <created>1585762832750</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1585762832750</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -268,7 +275,8 @@
     <MESSAGE value="v0.66 - Watki, Rysowanie modelu" />
     <MESSAGE value="v0.67 Poczatki wczytywania" />
     <MESSAGE value="v0.69" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0.69" />
+    <MESSAGE value="v0.70" />
+    <option name="LAST_COMMIT_MESSAGE" value="v0.70" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1245" y="233" key="#com.intellij.ide.util.MemberChooser" timestamp="1585681029424">
@@ -297,26 +305,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585412828511" />
-    <state width="1877" height="116" key="GridCell.Tab.0.bottom" timestamp="1585762709996">
+    <state width="1877" height="116" key="GridCell.Tab.0.bottom" timestamp="1585765812878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="30" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585431766686" />
-    <state width="1877" height="116" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585762709996" />
-    <state width="1877" height="116" key="GridCell.Tab.0.center" timestamp="1585762709996">
+    <state width="1877" height="116" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585765812878" />
+    <state width="1877" height="116" key="GridCell.Tab.0.center" timestamp="1585765812878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="30" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585431766685" />
-    <state width="1877" height="116" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585762709996" />
-    <state width="1877" height="116" key="GridCell.Tab.0.left" timestamp="1585762709996">
+    <state width="1877" height="116" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585765812878" />
+    <state width="1877" height="116" key="GridCell.Tab.0.left" timestamp="1585765812878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="30" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585431766685" />
-    <state width="1877" height="116" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585762709996" />
-    <state width="1877" height="116" key="GridCell.Tab.0.right" timestamp="1585762709996">
+    <state width="1877" height="116" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585765812878" />
+    <state width="1877" height="116" key="GridCell.Tab.0.right" timestamp="1585765812878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="30" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585431766686" />
-    <state width="1877" height="116" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585762709996" />
+    <state width="1877" height="116" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585765812878" />
     <state width="1877" height="127" key="GridCell.Tab.1.bottom" timestamp="1585409142750">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
