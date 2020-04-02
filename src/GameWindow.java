@@ -18,7 +18,7 @@ public class GameWindow extends JFrame {
         setSize(800, 700);
         scaleXPlanet();
         scaleYPlanet();
-        Game game = new Game(new DrawPlanet(), new DrawShip(getSize().height), readXPlanet, readYPlanet, getSize().width, getSize().height);
+        Game game = new Game(new DrawPlanet(), new DrawShip(getSize().height, getSize().width), readXPlanet, readYPlanet, getSize().width, getSize().height);
         add(game);
         setLocation(Loc);
         setVisible(true);
