@@ -23,7 +23,7 @@ public class Game extends JPanel {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D)g;
         Planet.paintComponent(g2d,x,y, width, height);
-        Ship.paintComponent(g2d);
+        Ship.paintComponent(g2d, width, height);
     }
 
 }

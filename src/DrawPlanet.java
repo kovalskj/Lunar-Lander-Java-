@@ -9,10 +9,6 @@ public class DrawPlanet extends JPanel {
         g2d.fillPolygon(readX, readY, 18);
         g2d.setFont(new Font("TimesRoman", Font.PLAIN + Font.BOLD, 50));
         g2d.drawString("#1",(int) (height*0.48), (int) (height*0.1));
-         g2d.setFont(new Font("TimesRoman", Font.PLAIN + Font.BOLD, 20));
-         g2d.drawString("X: ", (int) (width*0.01),(int) (height*0.05));
-         g2d.setFont(new Font("TimesRoman", Font.PLAIN + Font.BOLD, 20));
-         g2d.drawString("Y: ",(int) (width*0.01) ,(int) (height*0.1));
         g2d.setFont(new Font("TimesRoman", Font.PLAIN + Font.BOLD, 20));
         g2d.drawString("12345",(int) (width*0.9),(int) (height*0.1));
         g2d.setColor(Color.red);

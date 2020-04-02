@@ -13,13 +13,12 @@ public class GameWindow extends JFrame {
             readXPlanet = File.getPosition();
             readYPlanet = File.getElevation();
         } catch (Exception e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         setSize(800, 700);
         scaleXPlanet();
         scaleYPlanet();
-        Game game = new Game(new DrawPlanet(), new DrawShip(), readXPlanet, readYPlanet, getSize().width, getSize().height);
+        Game game = new Game(new DrawPlanet(), new DrawShip(getSize().height), readXPlanet, readYPlanet, getSize().width, getSize().height);
         add(game);
         setLocation(Loc);
         setVisible(true);
@@ -46,13 +45,13 @@ public class GameWindow extends JFrame {
         return this.getSize().height;
     }
 
+
     public void scaleXPlanet(){
         Dimension size = getSize();
         for(int i =0; i<readXPlanet.length; i++){
             readXPlanet[i] = (int)(((double)readXPlanet[i]/100)*size.width);
         }
     }
-
     public void scaleYPlanet(){
         Dimension size = getSize();
         for(int i =0; i<readYPlanet.length; i++){
